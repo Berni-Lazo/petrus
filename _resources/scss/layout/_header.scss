@@ -1,0 +1,43 @@
+.bd-example {
+  margin-top: 90px;
+}
+
+.img-carousel {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  margin-bottom: 5%;
+
+  &__title {
+    font-family: 'Papyrus Condensed';
+    font-weight: 900;
+    font-size: 4em;
+    color: $green;
+    text-shadow: 3px 3px $middle-green;
+  }
+
+  &__description {
+    font-size: 2em;
+  }
+
+  &__button {
+    font-weight: 700;
+    background-color: $dark-orange;
+    color: white;
+    border: 1px solid $light-orange;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 5%;
+
+    &:hover {
+      text-decoration: none;
+      background-color: $light-orange;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+nav {
+  background-color: $dark-green;
+}
+
+.logo {
+  width: 25%;
+}
+
+.nav-link {
+  font-size: 1.25em;
+  color: $dark-orange;
+  text-shadow: 2px 2px black;
+
+  &:hover {
+    color: $light-orange;
+  }
+}
