@@ -10,16 +10,59 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <title>Petrus - Contacto</title>
   </head>
-  <body class"contact">
-    <a class="navbar-brand" href="index.html"> <img class="logo" src="assets/images/logo.png" alt="logo"> </a>
+  <body class="contact">
+    <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="index.html"> <img class="logo" src="assets/images/logo.png" alt="logo"> </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Rutas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+
     <h2 class="contact__title">Contacto</h2>
     <p class="contact__description">Para reservas o mayor información contactanos en:</p>
 
-    <div class="contact__box">
-      <i class="fab fa-whatsapp"> +56 9 9316921</i>
-      <i class="fab fa-facebook-f"> PetrusBirdwatching</i>
-      <i class="fab fa-instagram"> Petrus_Birdwatching_Patagonia</i>
-      <i class="far fa-envelope"> petrusbirdwatching@gmail.com</i>
+    <div class="contact__box container">
+      <div class="contact__icons">
+        <i class="fab fa-whatsapp"></i> <p> +56 9 9316921</p>
+        <i class="fab fa-facebook-f"></i> <p> PetrusBirdwatching</p>
+        <i class="fab fa-instagram"></i> <p> Petrus_Birdwatching_Patagonia</p>
+        <i class="far fa-envelope"></i> <p> petrusbirdwatching@gmail.com</p>
+      </div>
+      <form class="contact__form" action="contact.html" method="post">
+        <h5>Escribe tu nombre</h5>
+        <input type="text" name="Nombre" value="Nombre">
+        <h5>Escribe tu mensaje</h5>
+        <input type="text" name="Mensaje" value="Mensaje">
+        <a href="#">Enviar</a>
+      </form>
     </div>
+
+    <footer class="footer">
+        <img class="footer__img" src="assets/images/logo.png" alt="logo">
+      </div>
+    </footer>
+
+
+    <script src="assets/scripts/main.bundle.js"></script>
   </body>
 </html>
