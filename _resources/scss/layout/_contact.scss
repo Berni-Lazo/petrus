@@ -32,6 +32,7 @@
     margin: 0 auto;
     text-align: center;
     padding: 2em;
+    min-width: 500px;
 
     i {
       color: $dark-orange;
@@ -40,11 +41,16 @@
     }
   }
 
+  &__info {
+      display: none;
+  }
+
+
   &__form {
     border: 5px solid $dark-green;
     color: $dark-green;
     padding: 2em;
-    width: 600px;
+    width: 80%;
     text-align: left;
     margin: 0 auto;
 
@@ -60,3 +66,12 @@
     }
   }
   }
+
+@media (min-width: 992px) {
+.contact {
+
+  &__info {
+      display: block;
+  }
+}
+}
