@@ -1,3 +1,4 @@
+
 .main {
 
   &__articles {
@@ -5,28 +6,56 @@
     justify-content: center;
   }
 
-  &__article {
+  &__article_1 {
   @extend %article;
   border-radius: 100%;
-  width: 350px;
-  height: 350px;
-
-  &:hover {
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 1%, rgba(186,235,95,1) 100%);
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(ellipse farthest-corner at 65% 35% , #ffffff 0%, #baeb5f 40%, #2c4007 65%);
+  background-size: 300% 300%;
+  animation: colors 3s linear infinite;
   }
+
+  &__article_2 {
+  @extend .main__article_1;
+  animation-delay: 1s;
+  }
+
+  &__article_3 {
+  @extend .main__article_1;
+  animation-delay: 2s;
 }
 }
+
+@keyframes colors {
+    0%{background-position:20% 20%}
+    6%{background-position: 30% 15%}
+    12%{background-position:50% 10%}
+    25%{background-position:80% 20%}
+    37%{background-position:90% 50%}
+    50%{background-position:80% 80%}
+    62%{background-position:50% 90%}
+    75%{background-position:20% 80%}
+    87%{background-position:10% 50%}
+    93%{background-position: 15% 30%}
+    100%{background-position:20% 20%}
+}
+
 
 .article {
 
   &__icon {
-    width: 35%;
     padding: 1em;
+
+    svg {
+      padding: .8em;
+    }
   }
 
   &__img {
-    padding: 1em;
-    width: 45%;
+    padding: .5em;
+    width: 35%;
+
 
     img {
       width: 100%;
@@ -111,7 +140,43 @@
 }
 
 @media (min-width: 992px) {
+.main {
+    &__article_1 {
+    width: 350px;
+    height: 350px;
+    }
+
+    &__article_2 {
+      width: 350px;
+      height: 350px;
+    }
+
+    &__article_3 {
+      width: 350px;
+      height: 350px;
+  }
+}
+
+.article {
+
+  &__icon {
+    width: 35%;
+    padding: 1em;
+  }
+
+  &__img {
+    padding: 1em;
+    width: 45%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .news {
+
+
   &__post {
     display: flex;
     justify-content: center;
