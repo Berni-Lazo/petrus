@@ -1,18 +1,18 @@
-.main__articles {
-  display: flex;
-  justify-content: center;
-}
-
 .main {
+
+  &__articles {
+    display: flex;
+    justify-content: center;
+  }
 
   &__article {
   @extend %article;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 350px;
   height: 350px;
 
   &:hover {
-    background-color: $palid-green;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 1%, rgba(186,235,95,1) 100%);
   }
 }
 }
@@ -48,17 +48,6 @@
   }
 }
 
-.icons {
-  display: flex;
-  justify-content: center;
-
-  i {
-    font-size: 3em;
-    color: $dark-orange;
-    margin: 1em;
-  }
-}
-
 .news {
   padding: 2em;
   background-color: $palid-green;
@@ -72,16 +61,14 @@
   &__post {
     margin-top: 2em;
     border: 5px solid white;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background-color: $dark-green;
   }
 
   &__img {
     padding: 1em;
-    width: 30%;
+    margin: 0 auto;
+    width: 80%;
 
     img {
       width: 100%;
@@ -91,7 +78,7 @@
 
   &__text {
     padding: 1em;
-    width: 65%;
+    width: 90%;
   }
 
   &__title {
@@ -110,4 +97,36 @@
   &__button {
     @extend .carousel-caption__button;
     }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+
+  i {
+    font-size: 3em;
+    color: $dark-orange;
+    margin: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+.news {
+  &__post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: $dark-green;
+  }
+
+  &__img {
+    padding: 1em;
+    width: 30%;
+  }
+
+  &__text {
+    width: 60%;
+  }
+}
 }
