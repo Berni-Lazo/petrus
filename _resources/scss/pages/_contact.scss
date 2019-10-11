@@ -11,7 +11,7 @@
     color: white;
     font-size: 1.2em;
     text-align: center;
-    margin: 2em 10em;
+    margin: 2em;
   }
 
   &__box {
@@ -20,26 +20,44 @@
     background-size: cover;
     margin-bottom: 4em;
     padding-bottom: 4em;
+    padding-top: 1em;
   }
 
   &__icons {
-    color: white;
+    color: &$dark-green;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: baseline;
     font-weight: 500;
-    font-size: 1.2em;
-    margin: 0 auto;
+    padding-top: 1em;
+    margin: 1em auto;
     text-align: center;
-    padding: 2em;
     min-width: 500px;
+    background-color: rgba(128, 128, 128, 0.6);
+  }
 
-    i {
+  &__icon {
       color: $dark-orange;
       font-size: 2em;
       font-weight: 900;
+      animation: roll-in-left 0.6s ease-out both;
+
+      &_4 {
+        @extend .contact__icon;
+        animation-delay: 0.4s;
+      }
+
+      &_3 {
+        @extend .contact__icon;
+        animation-delay: 0.8s;
+      }
+
+      &_2 {
+        @extend .contact__icon;
+        animation-delay: 1.2s;
+      }
     }
-  }
+
 
   &__info {
       display: none;
@@ -65,13 +83,27 @@
 
     }
   }
-  }
+}
 
+@keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+}
 @media (min-width: 992px) {
 .contact {
 
   &__info {
       display: block;
+      padding: 1em;
+      font-size: 1.1em;
   }
-}
+  }
 }

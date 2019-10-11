@@ -17,6 +17,7 @@
   &__article {
     @extend %article;
     background-color: $palid-green;
+    padding: 1em;
   }
 }
 
