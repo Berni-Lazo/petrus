@@ -93,7 +93,7 @@
   &__post {
     margin-top: 2em;
     border: 5px solid white;
-    padding-bottom: 1em;
+    padding: 1em;
     background-color: $dark-green;
   }
 
@@ -110,7 +110,7 @@
 
   &__text {
     padding: 1em;
-    width: 90%;
+
   }
 
   &__title {
@@ -170,7 +170,7 @@
 
     &__text {
       width: 60%;
-    }
+      }
   }
 }
 
@@ -213,6 +213,7 @@
 
   &__description {
     font-size: 1em;
+  
   }
 }
 
@@ -220,5 +221,17 @@
     i {
     font-size: 3em;
   }
+}
+
+
+.news {
+  &__title {
+    font-size: 1.5em;
+  }
+  &__description {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+
 }
 }
