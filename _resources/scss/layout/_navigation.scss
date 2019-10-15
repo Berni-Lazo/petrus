@@ -15,7 +15,10 @@ nav {
 }
 
 .navbar-toggler {
-  background-color: $dark-orange;
+  i {
+    color: $light-orange;
+    font-size: 2em;
+  }
 }
 
 .navbar-collapse {

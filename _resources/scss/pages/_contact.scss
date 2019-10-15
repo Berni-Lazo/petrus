@@ -1,6 +1,6 @@
 .contact {
   background-color: $dark-green;
-  margin-top: 120px;
+  margin-top: 90px;
 
   &__title {
     color: $light-orange;
@@ -9,9 +9,9 @@
 
   &__description {
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
-    margin: 2em;
+    margin: 1.5em;
   }
 
   &__box {
@@ -26,18 +26,17 @@
   &__icons {
     color: &$dark-green;
     display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+    justify-content: space-around;
     font-weight: 500;
-    padding-top: 1em;
+    padding: 1em;
     margin: 1em auto;
     text-align: center;
-    min-width: 500px;
-    background-color: rgba(128, 128, 128, 0.6);
+    min-width: 290px;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   &__icon {
-      color: $dark-orange;
+      color: $dark-green;
       font-size: 2em;
       font-weight: 900;
       animation: roll-in-left 0.6s ease-out both;
@@ -65,12 +64,13 @@
 
 
   &__form {
-    border: 5px solid $dark-green;
+    border: 5px solid $dark-orange;
     color: $dark-green;
     padding: 2em;
     width: 80%;
     text-align: left;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.6);
 
     input {
       width: 100%;
@@ -98,8 +98,25 @@
     }
 }
 
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 120px;
+  }
+}
+
+
+
 @media (min-width: 992px) {
 .contact {
+
+  &__description {
+      font-size: 1.2em;
+      margin: 2em;
+    }
+
+  &__icons {
+    padding-top: 2em;
+  }
 
   &__info {
       display: block;

@@ -1,5 +1,5 @@
 .bd-example {
-  margin-top: 90px;
+  margin-top: 69px;
 }
 
 .img-carousel {
@@ -40,6 +40,12 @@
       background-color: $light-orange;
       color: white;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-example {
+    margin-top: 110px;
   }
 }
 
